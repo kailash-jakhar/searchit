@@ -1,0 +1,21 @@
+.main {
+    min-height: 100%;
+    width: 90%;
+    max-width: 1300px;
+}
+.header {
+    color: #fff;
+}
+
+.header__title {
+    font-size: 35px;
+}
+.searchByTag {
+    color: #fff;
+}
+.searchTag {
+    color: #fff;
+}
+.searchTag__label {
+    font-weight: 500;
+}
