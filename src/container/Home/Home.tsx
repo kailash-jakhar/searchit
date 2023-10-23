@@ -67,13 +67,13 @@ const Home = () => {
             </View>
             <SearchTag onTagClick={setQuery} />
             <View marginTop={30} width="50%">
-                <SearchBar onSearch={setQuery} />
+                <SearchBar onSearch={setQuery} query={pageConfig.query} />
             </View>
             <View marginTop={70} marginBottom={70}>
                 <PostView data={photos} />
             </View>
         </div>
-        <Footer />
+        <Footer onTagClick={setQuery} />
     </PageContainer>
 }
 

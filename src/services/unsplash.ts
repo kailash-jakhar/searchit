@@ -1,7 +1,7 @@
 import axios, {  CancelToken, AxiosRequestConfig } from 'axios';
 const ACCESS_KEY = "r7nHg7DUZgUUuilx3NUxkFZaY-GHrW1gTZwJlSqKSac";
 const BASE_URL  = "https://api.unsplash.com/";
-const DATA_PER_PAGE = 9;
+const DATA_PER_PAGE = 12;
 const config = {
     headers : {
         'Authorization' : "Client-ID "+ACCESS_KEY

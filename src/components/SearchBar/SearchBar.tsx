@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import './SearchBar.css'
 interface SearchBarProps {
-    onSearch: (query:string) => void
+    onSearch: (query:string) => void,
+    query?:string
 }
 
-export const SearchBar = ({onSearch}:SearchBarProps) => {
+export const SearchBar = ({onSearch,query}:SearchBarProps) => {
     const [search , setSearch] = useState("");
+    useEffect(() => {
+        if(query)
+        setSearch(query)
+    },[query])
     return(
         <div className="search-bar-wrapper">
                 <div className="search__bar">
