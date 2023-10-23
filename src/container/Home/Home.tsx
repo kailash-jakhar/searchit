@@ -61,14 +61,14 @@ const Home = () => {
             <View marginTop={60}>
                 <Logo />
             </View>
-            <View paddingTop={70} className="header">
+            <div className="header">
                 <h1 className="header__title" >Free stock photos for everyone</h1>
                 <Text fontSize={16}>We offer the best free stock photo's all in one place</Text>
-            </View>
+            </div>
             <SearchTag onTagClick={setQuery} />
-            <View marginTop={30} width="50%">
+            <div className="searchContainer">
                 <SearchBar onSearch={setQuery} query={pageConfig.query} />
-            </View>
+            </div>
             <View marginTop={70} marginBottom={70}>
                 <PostView data={photos} />
             </View>

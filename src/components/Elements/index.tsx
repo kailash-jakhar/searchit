@@ -13,6 +13,6 @@ export const Text = ({children,className,...style}:StyleProps) => {
 }
 
 export const Flex =({children,className,...style}:StyleProps) => {
-    return <span className={className} style={{display:'flex',...style}}>{children}</span>
+    return <div className={className} style={{display:'flex',...style}}>{children}</div>
 }
 
