@@ -6,6 +6,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" Component={Home} />
+      <Route path="/searchit" Component={Home} />
     </Routes>
 
   );
