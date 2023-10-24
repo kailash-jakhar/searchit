@@ -2,7 +2,7 @@ name: Deploy site on github pages
 on:
   push:
     branches:
-      - gh-pages
+      - master
 # on:
 #   release:
 #     types: [published]
