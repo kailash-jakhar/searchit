@@ -1,15 +1,16 @@
 import User from "../User/User"
-import { User as UserType } from "../types/Unslash"
+import { Post as PostType, User as UserType } from "../types/Unslash"
 
 interface PostProps {
-    source:string,
-    user:UserType
+    data : PostType;
+    onClick:(post:PostType) => void
 }
 
-const Post = ({source,user}:PostProps) => {
-    return <div className="post" data-test-id="post">
-        <div className="post__image" data-test-id='post_image'>
-                <img src={source} height="100%" width="100%" alt="post" />
+const Post = ({data,onClick}:PostProps) => {
+    const {urls,user} = data;
+    return <div className="post" data-test-id="post" >
+        <div className="post__image" data-test-id='post_image' onClick={() => onClick(data)}>
+                <img src={urls.thumb} height="100%" width="100%" alt="post" />
         </div>
         <div className="post__user" data-test-id="post_user">
             <User name={user.first_name} avatar={user.profile_image.medium} />

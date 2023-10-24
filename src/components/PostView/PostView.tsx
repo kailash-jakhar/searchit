@@ -1,15 +1,16 @@
-import { Post as PostProps } from '../types/Unslash';
+import { Post as PostType } from '../types/Unslash';
 import Post from './Post';
 import './PostView.css';
 
 
 interface PostViewProps {
-    data: PostProps[],
+    data: PostType[],
+    onPostClick: (post:PostType) =>void 
 }
 
-const PostView = ({data}:PostViewProps) => {
+const PostView = ({data,onPostClick}:PostViewProps) => {
     return <div className='postView'>  
-    {data.map((post:PostProps) => <Post key={post.id} source={post.urls.thumb} user= {post.user}/>)}         
+    {data.map((post:PostType) => <Post key={post.id} data={post} onClick={onPostClick} />)}         
     </div>
 }
 

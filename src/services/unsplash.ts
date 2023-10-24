@@ -10,7 +10,7 @@ const config = {
 
 interface RequestParams {
     query?:string
-    pageNumber?:number
+    page?:number
 }
 
 
@@ -25,14 +25,14 @@ export const getAxiosConfig = (cancelToken?:CancelToken) => {
 
 export const getPhotos =(reqData:RequestParams,cancelToken?:CancelToken) => {
     const axiosConfig = getAxiosConfig(cancelToken);
-    const {query,pageNumber} = reqData
+    const {query,page} = reqData
     const queryParams = new  URLSearchParams();
     queryParams.append('per_page',DATA_PER_PAGE.toString())
     if(query){
         queryParams.append('query',query)
     }
-    if(pageNumber) {
-        queryParams.append('pageNumber',pageNumber.toString())
+    if(page) {
+        queryParams.append('page',page.toString())
     }
 
     const baseUrl = query? `${BASE_URL}search/` : BASE_URL;

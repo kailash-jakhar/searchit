@@ -5,7 +5,7 @@ import './PostView.css';
 
 describe('<Post />', () => {
   it('renders', () => {
-    cy.mount(<Post source={post.urls.small} user={post.user} />)
+    cy.mount(<Post data={post} onClick={()=>{}} />)
     cy.get('[data-test-id="post"]').should('exist');
     cy.get('[data-test-id="post_image"] img').should('exist').invoke('attr', 'src').should('eq',post.urls.small); 
     cy.get('[data-test-id="post_user"]').should('contain',post.user.first_name);
