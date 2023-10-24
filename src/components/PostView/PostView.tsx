@@ -9,7 +9,7 @@ interface PostViewProps {
 
 const PostView = ({data}:PostViewProps) => {
     return <div className='postView'>  
-    {data.map((post:PostProps) => <Post key={post.id} source={post.urls.small} user= {post.user}/>)}         
+    {data.map((post:PostProps) => <Post key={post.id} source={post.urls.thumb} user= {post.user}/>)}         
     </div>
 }
 

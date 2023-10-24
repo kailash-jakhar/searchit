@@ -1,8 +1,8 @@
 export interface Post {
     id:                       string;
     slug:                     string;
-    created_at:               Date;
-    updated_at:               Date;
+    created_at:               string;
+    updated_at:               string;
     promoted_at:              null;
     width:                    number;
     height:                   number;
@@ -37,7 +37,7 @@ export interface Sponsorship {
 
 export interface User {
     id:                 string;
-    updated_at:         Date;
+    updated_at:         string;
     username:           string;
     name:               string;
     first_name:         string;

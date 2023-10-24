@@ -7,7 +7,7 @@ interface TagProps {
 
 const Tag = ({label,onClick}:TagProps) => {
 
-    return <div className='tag' onClick={onClick}>{label}</div>
+    return <div data-test-id={`tag_${label}`} className='tag' onClick={onClick}>{label}</div>
 }
 
 export default Tag

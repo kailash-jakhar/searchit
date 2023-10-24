@@ -7,11 +7,11 @@ interface PostProps {
 }
 
 const Post = ({source,user}:PostProps) => {
-    return <div className="post">
-        <div className="post__image">
+    return <div className="post" data-test-id="post">
+        <div className="post__image" data-test-id='post_image'>
                 <img src={source} height="100%" width="100%" alt="post" />
         </div>
-        <div className="post__user">
+        <div className="post__user" data-test-id="post_user">
             <User name={user.first_name} avatar={user.profile_image.medium} />
         </div>
     </div>
