@@ -9,7 +9,6 @@ describe('<SearchBar />', () => {
     // see: https://on.cypress.io/mounting-react
     const onSearch = cy.spy().as('onSearchSpy')
     cy.mount(<div style={{width:"300px"}}><SearchBar onSearch={onSearch} query={query} /></div>)
-    cy.stub(SearchBar,'useState',() => ['search']);
     cy.get('input').should('have.value',query).clear().type(`${newQuery}{enter}`);
     cy.get('@onSearchSpy').should('have.been.calledWith',newQuery);
     cy.get('input').should('have.value',newQuery).clear().type(newQuery);
